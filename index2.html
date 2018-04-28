@@ -1,198 +1,111 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-     
-     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" src="style.css">
+    <title>Music App Assignment</title>
     <style>
-            .getInfo {
-                float:right;
-            }
-            </style>    
-  </head>
-  <body onload="init()">
-    <div style="max-width: 350px;border: 5px solid;overflow-y: scroll;max-height: 350px;float:left;margin-left: 165px;margin-top: 106px;">
-    <table id = "songsList">
-        <thead>
-            <tr>
-                <th> Song Name</th>
-               
-               <!-- <th> Song Album</th>
-                <th> Song Singer</th>-->
-            </tr>
-        </thead>
-        <tbody>
-            
-        </tbody>
-    </table>
-    </div>
-    <div style="margin-left: 446px;margin-top: 18px;padding-left: 100px;padding-top: 100px;">
-        <ul style="list-style-type:disc">
-            <li>
-                <p>Song label :</p>
-                <p id="name"></p>
-            </li>
-            <li id>
-                <p>Singer :</p>
-                <p id="singerToDisplay"></p>
-            </li><li>
-                <p>Album :</p>
-                <p id="albumToDisplay"></p>
-            </li>
-                            
-            
-          </ul> 
-                  <ul style="list-style: none">
-                        <li>Audio Files
-                          <ul id="list">
-                             <li><a href="#" data-value="abc.mp3" id="namrata">abc.mp3</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                      
-                      <audio id="audio" controls="controls" style = "display:none;">
-                        <source id="audioSource" src=""></source>
-                        Your browser does not support the audio format.
-                      </audio>  
-                      <button onclick="pauseAudio1()" type="button">Pause Audio</button>  
-                      <button onclick="pauseAudio()" type="button">Stop Audio</button>    
+       
+    </style>
+</head>
 
-                      
-                  </div>
-    <div class = "container" style="margin: 148px;margin-left: 310px;">
-            <div>
-                <label>Song Name</label>
-                <input type = "text" placeholder = "Enter song name" id="songName">
-            </div>
-            <div>
-                    <label>Song Album</label>
-                    <input type = "text" placeholder = "Enter song Album" id="songAlbum">
+<body onload="init()">
+    <div id="main_place" class="imgContainer">
+        <img src="img2.png" width="260px" height="190" alt="Natural" />
+        <img src="img1.png" width="260px" height="190" alt="Natural" /><br>
+        <img src="img2.png" width="260px" height="190" alt="Natural" />
+        <img src="img1.png" width="260px" height="190" alt="Natural" />
+    </div>
+    <div class="playlistContainer">
+        <table id="songsList">
+            <thead>
+                <tr>
+                    <th>Playlist</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="songDetail container">
+        <h5> Song Details</h5>
+        <ul class="songDetailInnnerContainer">
+            <li>
+                <span class="itemLabel">Song label :</span>
+                <span id="name"></span>
+            </li><hr>
+            <li>
+                <span class="itemLabel">Singer :</span>
+                <span id="singerToDisplay"></span>
+            </li><hr>
+            <li>
+                <span class="itemLabel">Album :</span>
+                <span id="albumToDisplay"></span>
+            </li><hr>
+        </ul>
+        <ul id="list" class="buttonContainer" >
+            <li><a class="playBtn"
+                 href="#" data-value="" id="playSongTag">Play song</a></li>
+        </ul>
+       
+        <a class="playBtn" href="#" onclick="pauseAudio()">Pause Song</a>
+        <a class="playBtn" href="#" onclick="stopAudio()">Stop Song</a>
+        <br>
+        <audio class="audioContainer" id="audio" controls="controls">
+                <source id="audioSource" src=""></source>
+                Your browser does not support the audio format.
+            </audio>
+    </div>
+    <button id="myBtn" class ="addNewSong">Add new Song</button>
+    
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form>
+        <div class="addSongContainer">
+                <div>
+                    <label>Song Name</label>
+                    <input type="text" placeholder="Enter song name" id="songName" required>
                 </div>
                 <div>
-                        <label>Singer</label>
-                        <input type = "text" placeholder = "Enter singers" id="songSinger">
-                    </div>
-                    <button id="submit" onclick="my()" style="margin-left: 390px;">Add Song</button>
-        </div>
-    
+                    <label>Song Album</label>
+                    <input type="text" placeholder="Enter song Album" id="songAlbum" required>
+                </div>
+                <div>
+                    <label>Singer</label>
+                    <input type="text" placeholder="Enter singers" id="songSinger" required>
+                </div>
+                <button id="submit" onclick="my()" class="submitBtn">Add to playlist</button>
+            </div>
+        </form>
+      </div>
+      </div>
 
+    
+    <marquee id="currentSong"></marquee>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
-        var x = document.getElementById("audio"); 
-        function pauseAudio() { 
-    x.pause(); 
-    x.currentTime =0;
-}
-function pauseAudio1() { 
-    x.pause(); 
-    
-}
-      list.onclick = function(e) {
-  e.preventDefault();
-  var elm = e.target;
-  var audio = document.getElementById('audio');
-  var source = document.getElementById('audioSource');
-  source.src = elm.getAttribute('data-value');
-  audio.load(); //call this to just preload the audio without playing
-  audio.play(); //call this to play the song right away
-};
-        var SongsArray = [];
-    
-        var javaobj = [];
-        function init(){
-            if(localStorage.songRecord){
-                SongsArray = JSON.parse(localStorage.songRecord);
-                completeArray = JSON.parse(localStorage.songRecord);
-                for(var i = 0; i<SongsArray.length;i++){
-                    var songName = SongsArray[i].songName;
-                   // var songAlbum = SongsArray[i].songAlbum;
-                  //  var songSinger = SongsArray[i].songSinger;
-                    //createTable(songName,songAlbum,songSinger);
-                    createTable(songName);
-                }
-               
-            }
-            var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-      if(xhttp.readyState == 4 && xhttp.status == 200){
-       javaobj = JSON.parse(xhttp.response);
-     console.log(javaobj[0].album);
-     //document.getElementById("listItem").innerHTML = "Hello World";
-     for(var i = 0; i<javaobj.length;i++){
-                    var songName = javaobj[i].name;
-                // var songAlbum = javaobj[i].album;
-                 //   var songSinger = javaobj[i].singers;
-                    createTable(songName);
-                }
-  }
-}
-xhttp.open("GET", "data.json", true);
-xhttp.send();
-        }//closing of init
- function my(){
-     
-     var songName = document.getElementById("songName").value;
-     var songAlbum = document.getElementById("songAlbum").value;
-     var songSinger = document.getElementById("songSinger").value;
-     var songObj = {songName:songName,
-                    songAlbum:songAlbum,
-                    songSiner:songSinger};
-    SongsArray.push(songObj);
-     localStorage.songRecord = JSON.stringify(SongsArray);
-     createTable(songName);
-   
- }
- function createTable(songName){
-     
-    var table = document.getElementById("songsList");
-     var row = table.insertRow();
-     var songNameCell = row.insertCell(0);
-     
-    // var songAlbumCell = row.insertCell(1);
-     
-    // var songSingerCell = row.insertCell(2);
-     songNameCell.innerHTML= songName;
-     songNameCell.setAttribute("id",songName);
-     
-var aTag = document.createElement('a');
-aTag.setAttribute('href',"#");
-aTag.innerHTML = "View Details";
-songNameCell.appendChild(aTag);
-aTag.classList.add("getInfo");
-aTag.setAttribute("id",songName);
-aTag.setAttribute("onclick","myfunction(this)");
-//var aTag2 = document.createElement('a');
-     //<a class="button" title="button">Play Sound</a>
-    // document.write('<button>''</button>');
-    // songAlbumCell.innerHTML = songAlbum;
-    // songSingerCell.innerHTML = songSinger;
- }
- function myfunction(current){
-     alert(current.id);
-     document.getElementById("name").innerHTML = current.id;
-     (document.getElementById("namrata")).setAttribute("data-value", current.id+".mp3");
-     for(var i =0 ; i<SongsArray.concat(javaobj).length;i++){
-         if(current.id == SongsArray.concat(javaobj)[i].name){
-             console.log(SongsArray.concat(javaobj)[i]);
-             document.getElementById("name").innerHTML = SongsArray.concat(javaobj)[i].name;
-             document.getElementById("albumToDisplay").innerHTML = SongsArray.concat(javaobj)[i].album;
-             document.getElementById("singerToDisplay").innerHTML = SongsArray.concat(javaobj)[i].singers;
-         }
-     }
- }
- 
-    </script> 
-  </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script rel="type/javascript" src="userCreate.js">
+       
+    </script>
+</body>
+
 </html>

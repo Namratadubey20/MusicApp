@@ -1,13 +1,99 @@
 [{
     "name": "OMereDilKehainSANAM",
-    "album": "Hii",
+    "album": "T-Series",
+    "singers": ["Suresh Wadkar", "Vaishali Samant"]
+  }, {
+    "name": "Ishq Mubarak",
+    "album": "Tulsi",
+    "singers": ["Udit Narayan", "Tulsi Kumar"]
+  }, {
+    "name": "Binte Dil",
+    "album": "T-Series",
+    "singers": ["Talat Mahmood", "Tanvi Shah"]
+  },
+  {
+    "name": "Dil Chori",
+    "album": "T-Series",
+    "singers": ["Suresh Wadkar", "Vaishali Samant"]
+  }, {
+    "name": "Ek Dil Ek Jaan",
+    "album": "Tulsi",
+    "singers": ["Udit Narayan", "Tulsi Kumar"]
+  }, {
+    "name": "Bom Diggy Diggy",
+    "album": "T-Series",
+    "singers": ["Talat Mahmood", "Tanvi Shah"]
+  },{
+    "name": "OMereDilKehainSANAM",
+    "album": "T-Series",
     "singers": ["Suresh Wadkar", "Vaishali Samant"]
   }, {
     "name": "abc",
-    "album": "Hello",
+    "album": "Tulsi",
     "singers": ["Udit Narayan", "Tulsi Kumar"]
   }, {
     "name": "BulleyaSultanPopon90Kbps",
-    "album": "Don",
+    "album": "T-Series",
+    "singers": ["Talat Mahmood", "Tanvi Shah"]
+  },{
+    "name": "OMereDilKehainSANAM",
+    "album": "T-Series",
+    "singers": ["Suresh Wadkar", "Vaishali Samant"]
+  }, {
+    "name": "abc",
+    "album": "Tulsi",
+    "singers": ["Udit Narayan", "Tulsi Kumar"]
+  }, {
+    "name": "BulleyaSultanPopon90Kbps",
+    "album": "T-Series",
+    "singers": ["Talat Mahmood", "Tanvi Shah"]
+  },
+  {
+    "name": "OMereDilKehainSANAM",
+    "album": "T-Series",
+    "singers": ["Suresh Wadkar", "Vaishali Samant"]
+  }, {
+    "name": "abc",
+    "album": "Tulsi",
+    "singers": ["Udit Narayan", "Tulsi Kumar"]
+  }, {
+    "name": "BulleyaSultanPopon90Kbps",
+    "album": "T-Series",
+    "singers": ["Talat Mahmood", "Tanvi Shah"]
+  },{
+    "name": "OMereDilKehainSANAM",
+    "album": "T-Series",
+    "singers": ["Suresh Wadkar", "Vaishali Samant"]
+  }, {
+    "name": "abc",
+    "album": "Tulsi",
+    "singers": ["Udit Narayan", "Tulsi Kumar"]
+  }, {
+    "name": "BulleyaSultanPopon90Kbps",
+    "album": "T-Series",
+    "singers": ["Talat Mahmood", "Tanvi Shah"]
+  },{
+    "name": "OMereDilKehainSANAM",
+    "album": "T-Series",
+    "singers": ["Suresh Wadkar", "Vaishali Samant"]
+  }, {
+    "name": "abc",
+    "album": "Tulsi",
+    "singers": ["Udit Narayan", "Tulsi Kumar"]
+  }, {
+    "name": "BulleyaSultanPopon90Kbps",
+    "album": "T-Series",
+    "singers": ["Talat Mahmood", "Tanvi Shah"]
+  },{
+    "name": "OMereDilKehainSANAM",
+    "album": "T-Series",
+    "singers": ["Suresh Wadkar", "Vaishali Samant"]
+  }, {
+    "name": "abc",
+    "album": "Tulsi",
+    "singers": ["Udit Narayan", "Tulsi Kumar"]
+  }, {
+    "name": "BulleyaSultanPopon90Kbps",
+    "album": "T-Series",
     "singers": ["Talat Mahmood", "Tanvi Shah"]
   }]
