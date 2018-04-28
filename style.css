@@ -1,20 +1,21 @@
+
 body{
-    background-color: #DCEDF8;
+background-color: #DCEDF8;
 }
 .songDetailInnerContainer{
-    list-style-type:disc
+list-style-type:disc
 }
 .playlistContainer{
 max-width: 350px;border: 5px solid;overflow-y: scroll;max-height:380px;float:left;margin-left: 21px;margin-top: 63px;margin-right: 31px;
 }
 .imgContainer{
-    margin-left: -2px;margin-top: 63px;padding-left: 17px;padding-top: 0px;max-width: 679px;float: left;
+margin-left: -2px;margin-top: 63px;padding-left: 17px;padding-top: 0px;max-width: 679px;float: left;
 }
 .submitBtn{
-    margin-left: 390px;
+margin-left: 390px;
 }
 .songDetail.buttonContainer{
-    list-style-type:none
+list-style-type:none
 }
 .addNewSong {
 position: relative;
@@ -31,16 +32,16 @@ font-weight: bold;
 border-color: #4e9caf;
 }
 .getInfo {
-    float: right;
+float: right;
 }
 .songDetail h5 {
-  margin-top: -41px;
+margin-top: -41px;
 }
 .songDetail.container{
-    margin-left: 446px;margin-top: 18px;padding-left: 100px;padding-top: 100px;
+margin-left: 446px;margin-top: 18px;padding-left: 100px;padding-top: 100px;
 }
 .itemLabel {
-      font-weight: bold;
+font-weight: bold;
 }
 .playBtn{
 width: 166px;height: 140px;background: #4E9CAF;padding: 9px;text-align: center;border-radius: 5px;color: white;font-weight: bold;
@@ -50,27 +51,27 @@ width: 166px;height: 140px;background: #4E9CAF;padding: 9px;text-align: center;b
 text-decoration: none;
 }
 .buttonContainer{
-    display:inline-block;
-    list-style-type:none;
-    margin-left: -52px;
+display:inline-block;
+list-style-type:none;
+margin-left: -52px;
 margin-bottom: 30px;
 margin-top: 15px;
 }
 .audioContainer{
-    margin-left: -10px;
+margin-left: -10px;
 }
 .modal-content{
-    width: 583px;
- height: 252px;
- position: relative;
+width: 583px;
+height: 252px;
+position: relative;
 top: 133px;
- left: 324px;
+left: 324px;
 padding-left: 29px;
 padding-top: 12px;
 border: 5px solid #4E9CAF;
 }
 .modal-content label{
-    display: inline-block;
+display: inline-block;
 margin-bottom: 20px;
 width: 108px;
 font-weight: bold;}
@@ -90,7 +91,6 @@ border-radius: 5px;
 color: white;
 font-weight: bold;
 }
-
 .modal-content .close{
 margin-left:520px;
 }

@@ -100,7 +100,7 @@ function myfunction(current) {
     }
 }
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+myBtn.onclick = function() {
 modal.style.display = "block";
 }
 
