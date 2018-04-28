@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world</title>
+    <title>Hello, world!</title>
      
      
     <style>
@@ -34,11 +34,21 @@
     </table>
     </div>
     <div style="margin-left: 446px;margin-top: 18px;padding-left: 100px;padding-top: 100px;">
-            <ul style="list-style-type:disc">
-                    <li id="name"></li>
-                    <li></li>
-                    <li></li>
-                  </ul> 
+        <ul style="list-style-type:disc">
+            <li>
+                <p>Song label :</p>
+                <p id="name"></p>
+            </li>
+            <li id>
+                <p>Singer :</p>
+                <p id="singerToDisplay"></p>
+            </li><li>
+                <p>Album :</p>
+                <p id="albumToDisplay"></p>
+            </li>
+                            
+            
+          </ul> 
                   <ul style="list-style: none">
                         <li>Audio Files
                           <ul id="list">
@@ -47,7 +57,7 @@
                         </li>
                       </ul>
                       
-                      <audio id="audio" controls="controls">
+                      <audio id="audio" controls="controls" style = "display:none;">
                         <source id="audioSource" src=""></source>
                         Your browser does not support the audio format.
                       </audio>  
@@ -91,21 +101,16 @@ function pauseAudio1() {
 }
       list.onclick = function(e) {
   e.preventDefault();
-
   var elm = e.target;
   var audio = document.getElementById('audio');
-
   var source = document.getElementById('audioSource');
   source.src = elm.getAttribute('data-value');
-
   audio.load(); //call this to just preload the audio without playing
   audio.play(); //call this to play the song right away
 };
-
         var SongsArray = [];
     
         var javaobj = [];
-
         function init(){
             if(localStorage.songRecord){
                 SongsArray = JSON.parse(localStorage.songRecord);
@@ -131,12 +136,10 @@ function pauseAudio1() {
                  //   var songSinger = javaobj[i].singers;
                     createTable(songName);
                 }
-
   }
 }
 xhttp.open("GET", "data.json", true);
 xhttp.send();
-
         }//closing of init
  function my(){
      
@@ -150,12 +153,9 @@ xhttp.send();
      localStorage.songRecord = JSON.stringify(SongsArray);
      createTable(songName);
    
-
  }
-
  function createTable(songName){
      
-
     var table = document.getElementById("songsList");
      var row = table.insertRow();
      var songNameCell = row.insertCell(0);
@@ -186,14 +186,13 @@ aTag.setAttribute("onclick","myfunction(this)");
      for(var i =0 ; i<SongsArray.concat(javaobj).length;i++){
          if(current.id == SongsArray.concat(javaobj)[i].name){
              console.log(SongsArray.concat(javaobj)[i]);
-             document.getElementById("name").innerHTML = SongsArray.concat(javaobj)[i].name+ ""+SongsArray.concat(javaobj)[i].album + " " + SongsArray.concat(javaobj)[i].singers ;
+             document.getElementById("name").innerHTML = SongsArray.concat(javaobj)[i].name;
+             document.getElementById("albumToDisplay").innerHTML = SongsArray.concat(javaobj)[i].album;
+             document.getElementById("singerToDisplay").innerHTML = SongsArray.concat(javaobj)[i].singers;
          }
      }
  }
-
  
-
-
     </script> 
   </body>
 </html>
